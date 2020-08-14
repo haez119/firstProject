@@ -28,7 +28,6 @@ public class Exercise09 {
 				for (int i = 0; i < scores.length; i++) {
 					System.out.print("scores [" + i + "]> ");
 					scores[i] = scanner.nextInt();
-					
 				}
 			} else if (selectNo == 3) {
 				
@@ -44,14 +43,13 @@ public class Exercise09 {
 					sum += scores[i];
 					if(max <= scores[i]) {
 						max = scores[i];
-					} else {
-						max = max;
-					}
+					} 
 				}
 				
-				double avg = sum / scores.length;
+				double avg = (double) sum / scores.length;
 				System.out.println("최고 점수: " + max);
-				System.out.println("평균 점수: " + avg);
+				System.out.printf("평균 점수: %.2f", avg);
+				System.out.println();
 				
 			} else if (selectNo == 5) {
 				run = false;
@@ -59,6 +57,7 @@ public class Exercise09 {
 		}
 
 		System.out.println("프로그램 종료");
+		scanner.close();
 
 	}
 }
