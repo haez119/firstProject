@@ -7,8 +7,11 @@ public class Student {
 	private int stuNum;
 	private String name;
 	private String stuName;
+	// private Person person; 클래스도 올 수 있음
 	
-	// 생성자
+	// 생성자(클래스 이름이랑 같, 반환 타입이 없음)
+	// 동일한 생성자 명 여러번 사용 >> 생성자 오버로딩
+	// 생성자 오버로딩 사용하려면 매개값의 타입이 다르거나 매개값의 개수가 달라야 함
 	public Student() {}
 	
 	public Student(int stuNum) {

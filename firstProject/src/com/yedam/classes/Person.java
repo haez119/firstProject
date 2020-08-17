@@ -14,6 +14,7 @@ public class Person {
 	public Person(String name) { // 매개값을 하나 받아서 생성
 		this.name = name; 
 	}
+	
 	public Person(String name, int age) { // 매개값을 두개 받아서 생성
 		this.name = name; 
 		this.age = age;

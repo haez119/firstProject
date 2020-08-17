@@ -7,34 +7,30 @@ public class T2 {
 
 		Scanner scanner = new Scanner(System.in);
 
-		int sum = 0, count = 0, num = 0, max = 0, min = 0;
+		int sum = 1, count = 0, num = 0, max = 0, min = 0;
 		double avg = 0;
-		
-		System.out.print("점수 입력> ");
-		min = scanner.nextInt();
 
-		
-		for (int i = 0; i <= 1; i++) {
-			for (int j = 0; j >= 0; j++) {
+		boolean run = true;
+
+		while(run) {
+			if (num == -1) {
+				run = false;
+			} else {
 				System.out.print("점수 입력> ");
 				num = scanner.nextInt();
-				if (num == -1) {
-					break;
-				}
+				if ( count == 0) {min = num; }
 				sum += num;
 				count++;
-
 				if (max <= num) {
 					max = num;
 				}
-
-				if (min >= num) {
+				if (num >= 0 && num <= min) {
 					min = num;
 				}
 			}
 		}
 
-		System.out.println("최대값: " + max + ", 최소값: " + min + ", 평균: " + ((double) sum / count));
-
+		System.out.println("최대값: " + max + ", 최소값: " + min + ", 평균: " + ((double)sum/(count-1)) );
+		
 	}
 }

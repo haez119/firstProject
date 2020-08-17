@@ -5,13 +5,13 @@ public class StudentExample {
 
 		// 생성자로 데이터 넣기
 		Student stu1 = new Student(1111);
-		stu1.setName("이름1");
+		stu1.setName("이름1"); // 클래스의 필드에 직접 값 대입
 		stu1.setStuName("말타기");
 
 		System.out.println(stu1.getStuNum() + ", " + stu1.getName() + ", " + stu1.getStuName());
 
 		Student stu2 = new Student(2222, "이름2");
-		stu2.setStuName("역사");
+		stu2.setStuName("역사"); // 클래스의 메소드(setStuName()) 사용해서 값 대입
 		System.out.println(stu2.getStuNum() + ", " + stu2.getName() + ", " + stu2.getStuName());
 
 		Student stu3 = new Student(3333, "이름3", "말타기");
@@ -29,7 +29,8 @@ public class StudentExample {
 		
 		// 넣은 데이터 배열에 넣기
 		Student[] stuAry = { stu1, stu2, stu3, stu4, s5 };
-
+		// 배열은 크기 한번 정해지면 늘리거나 줄일 수 없다 / 새로운 배열 만들어서 기존 배열 복사한 후 추가하는 방법 사용
+		
 		// for 반복문으로 배열 출력
 		System.out.println();
 		for (int i = 0; i < stuAry.length; i++) {

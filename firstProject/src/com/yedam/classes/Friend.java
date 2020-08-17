@@ -1,11 +1,14 @@
 package com.yedam.classes;
 
 public class Friend {
-	String name;
-	String number;
-	int age;
+
+	private String name;
+	private String number;
+	private int age;
 	
-	public Friend (String name, int age, String number) {
+	
+	
+	public Friend(String name, int age, String number) {
 		this.name = name;
 		this.age = age;
 		this.number = number;
@@ -34,7 +37,5 @@ public class Friend {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	
 
 }
