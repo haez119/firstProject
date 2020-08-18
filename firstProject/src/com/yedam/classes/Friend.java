@@ -6,7 +6,7 @@ public class Friend {
 	private String number;
 	private int age;
 	
-	
+	public Friend() {}
 	
 	public Friend(String name, int age, String number) {
 		this.name = name;
@@ -37,5 +37,13 @@ public class Friend {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+	@Override
+	public String toString() {
+		return "일반친구 이름: " + this.name + ", 연락처: " + this.number;
+	}
+	
+	
+	
 
 }
