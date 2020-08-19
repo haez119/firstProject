@@ -26,10 +26,6 @@ public class Employee {
 		this.jobId = jobId;
 	}
 	
-	public Employee(int employeeId) {
-		this.employeeId = employeeId;
-	}
-
 	public int getEmployeeId() {
 		return employeeId;
 	}

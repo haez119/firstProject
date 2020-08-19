@@ -7,11 +7,11 @@ import java.sql.SQLException;
 
 public class EmpDAO {
 	
-	public void updateEmployee(int salary, int empid) {
+	public void updateEmployee(Employee emp) {
 		
 		
 		Connection conn = DBConnection.getConnection(); 
-		String sql = "UPDATE emp_temp  SET salary = " + salary + " WHERE employee_id =" + empid;
+		String sql = "UPDATE emp_temp  SET salary = " + emp.getSalary() + " WHERE employee_id =" + emp.getEmployeeId();
 		System.out.println(sql);
 		
 		try {
@@ -23,10 +23,10 @@ public class EmpDAO {
 		}
 	}
 	
-	public void removeEmployee(Employee emp) {
+	public void removeEmployee(int empid) {
 		
 		Connection conn = DBConnection.getConnection(); 
-		String sql = "DELETE FROM emp_temp WHERE employee_id = " + emp.getEmployeeId();
+		String sql = "DELETE FROM emp_temp WHERE employee_id = " + empid;
 		System.out.println(sql);
 		
 		try {
