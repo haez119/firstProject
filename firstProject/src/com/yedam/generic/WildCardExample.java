@@ -5,6 +5,7 @@ public class WildCardExample {
 	// 제네릭 와일드 카드 : 앞에 <T> 와 같은 안붙여줘도 됨
 	public static void registerCourse(Course<?> course) {
 		// 모든 클래스
+		System.out.println(course.getCourseName());
 	}
 	
 	public static void registerCourseStudent(Course<? extends Student> course) {
