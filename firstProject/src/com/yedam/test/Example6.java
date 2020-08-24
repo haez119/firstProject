@@ -1,6 +1,6 @@
 package com.yedam.test;
 
-public class Example06 {
+public class Example6 {
 
 	public static void main(String[] args) {
 		int lengthTop = 5;
