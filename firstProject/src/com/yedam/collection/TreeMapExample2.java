@@ -40,6 +40,7 @@ public class TreeMapExample2 {
 		map.put(new Fruit("Banana", 2000), 3);
 		
 		Set<Fruit> set = map.keySet(); // 정렬여부 확인x
+		
 		NavigableSet<Fruit> dSet = map.descendingKeySet(); // 내림차순으로 가져옴
 		dSet = map.navigableKeySet(); // 오름차순
 		
