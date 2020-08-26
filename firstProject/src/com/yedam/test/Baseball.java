@@ -38,7 +38,7 @@ public class Baseball {
 			
 			int s=0, b=0;
 			
-			if(fs == com[1] ) {
+			if(fs == com[0] ) {
 				s++;
 			} else {
 				for(int a : com) {
