@@ -42,9 +42,8 @@ public class CourseMain {
 		for(Student ss : list.list) {
 			System.out.println( ss );
 			sum += ss.getScore();
-			if(ss.getScore() >= max) {
-				max = ss.getScore();
-			}
+			max = (ss.getScore() >= max) ? ss.getScore() : max;
+			
 		}
 		System.out.println("평균점수: " + (double) (sum / list.list.size()) + ", 최고점수: " + max);
 	}

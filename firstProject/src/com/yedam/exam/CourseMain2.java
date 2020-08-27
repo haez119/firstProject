@@ -9,7 +9,7 @@ public class CourseMain2 {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
-		List<Course> cList = new ArrayList<>();
+		List<Course> cList = new ArrayList<>(); //과정명 있는 배열
 
 		while (true) {
 			System.out.println("--------------------------------------------------");
@@ -39,8 +39,10 @@ public class CourseMain2 {
 				for(Course cc : cList) {
 					if(cc.getCourse().equals(course)) {
 						cc.course(new Student(name,age,score),course);
-					} 
-				}
+					} else {
+						System.out.println("==해당 과정이 없습니다.==");
+					}
+				} 
 			}else if(selectNo == 3) {
 				System.out.print("과정명> "); 
 				String course = scanner.nextLine();
@@ -48,6 +50,8 @@ public class CourseMain2 {
 				for(Course cc : cList) {
 					if(cc.getCourse().equals(course)) {
 						cc.studentList();
+					}else {
+						System.out.println("==해당 과정이 없습니다.==");
 					}
 				}
 			}else if(selectNo == 4) {
@@ -57,6 +61,8 @@ public class CourseMain2 {
 				for(Course cc : cList) {
 					if(cc.getCourse().equals(course)) {
 						showCourseInfo(cc);
+					}else {
+						System.out.println("==해당 과정이 없습니다.==");
 					}
 				}
 			}else if(selectNo == 5) {
@@ -77,9 +83,7 @@ public class CourseMain2 {
 		for(Student ss : list.list) {
 			System.out.println( ss );
 			sum += ss.getScore();
-			if(ss.getScore() >= max) {
-				max = ss.getScore();
-			}
+			max = (ss.getScore() >= max) ? ss.getScore() : max;
 		}
 		System.out.println("평균점수: " + (double) (sum / list.list.size()) + ", 최고점수: " + max);
 	}
