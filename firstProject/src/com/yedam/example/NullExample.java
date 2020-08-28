@@ -10,11 +10,27 @@ public class NullExample {
 		
 		System.out.println(Objects.requireNonNull(str1));
 		
-		String name = Objects.requireNonNull(str2);
+		try {
+			String name = Objects.requireNonNull(str2);			
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
-		String name1 = Objects.requireNonNull(str2, "이름이 없습니다.");
-	
-
+		// 1번 매개값이 null이면 nullpointE~ 발생. 2번 매개값은 nullpointE~ 의 예외메세지
+		try {
+			String name1 = Objects.requireNonNull(str2, "이름이 없습니다.");	
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			String name1 = Objects.requireNonNull(str2, () ->"이름 없다고");	//람다식??????
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		String name1 = Objects.requireNonNull(str1, "이름이 없습니다.");	
+		System.out.println(name1);
+		
 	}
-
 }
