@@ -1,5 +1,7 @@
 package com.yedam.test;
 
+import java.util.Calendar;
+
 public class Example6 {
 
 	public static void main(String[] args) {
@@ -9,6 +11,11 @@ public class Example6 {
 		
 		double area = (lengthTop + lengthBottom) * hight * 0.5;
 		System.out.println(area);
+		
+		
+		
+
+		
 		
 	}
 
